@@ -466,7 +466,7 @@
                         <outlet property="passTxt" destination="Bpe-0f-Rdu" id="CJn-43-5mV"/>
                         <outlet property="userImg" destination="6Ti-39-yCh" id="Hd1-e3-HVl"/>
                         <outlet property="usernameTxt" destination="yHE-GZ-uZV" id="VhR-Tk-OLr"/>
-                        <segue destination="7Z6-oH-aiq" kind="unwind" unwindAction="prepareForUnwindWithSegue:" id="JVZ-NW-Zfs"/>
+                        <segue destination="7Z6-oH-aiq" kind="unwind" identifier="unwindToChannelVC" unwindAction="prepareForUnwindWithSegue:" id="EUO-wC-Jrk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSO-jH-9Bf" userLabel="First Responder" sceneMemberID="firstResponder"/>
