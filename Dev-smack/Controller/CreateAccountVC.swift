@@ -25,7 +25,7 @@ class CreateAccountVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func pickAvatarPressed(_ sender: Any) {
-        
+        performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
     }
     @IBAction func createAccntPressed(_ sender: Any) {
         guard let name = usernameTxt.text , usernameTxt.text != "" else { return }
@@ -40,11 +40,8 @@ class CreateAccountVC: UIViewController {
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if success {
                                 print("\(UserDataService.instance.name) \n\(UserDataService.instance.avatarName)")
-                                self.performSegue(withIdentifier: UNWIND, sender: nil)
-                            }
-                        })
-                    }
-                })
+                                self.performSegue(withIdentifier: UNWIND, sender: nil)  }
+                        })  }   })
             }   }   }
     @IBAction func pickBGColorPressed(_ sender: Any) {
         
