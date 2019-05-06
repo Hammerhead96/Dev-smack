@@ -23,21 +23,20 @@ class CreateAccountVC: UIViewController {
     // I want me make this button go to LoginVC
     @IBAction func closePresed(_ sender: Any) {
         performSegue(withIdentifier: UNWIND, sender: nil)
+      // performSegue(withIdentifier: BACK, sender: nil)
     }
     // Unwind will be called after Account Activation
     @IBAction func pickAvatarPressed(_ sender: Any) {
         
     }
     @IBAction func createAccntPressed(_ sender: Any) {
-//        guard let email = emailTxt.text , emailTxt.text != "" else { return }
-//        guard let pass = passTxt.text , passTxt.text != "" else { return }
-//        AuthService.instance.registerUser(email: email, password: pass)
-//        { (success) in
-//            if success {
-//                print("registered user!")
-//            }
-//        }
-    }
+        guard let email = emailTxt.text , emailTxt.text != "" else { return }
+        guard let pass = passTxt.text , passTxt.text != "" else { return }
+        AuthService.instance.registerUser(email: email, password: pass)
+        { (success) in
+            if success {
+                print("registered user!")
+            }   }   }
     @IBAction func pickBGColorPressed(_ sender: Any) {
         
     }

@@ -207,7 +207,7 @@
                                     <action selector="createAccntBtnPressed:" destination="Tlj-ge-iZ0" eventType="touchUpInside" id="Exv-i1-xP3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dw-dq-BRg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dw-dq-BRg" customClass="RoundedButton" customModule="Dev_smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="286" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -218,6 +218,11 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KW1-m1-Rq4">
                                 <rect key="frame" x="126.5" y="80" width="122.5" height="40"/>
@@ -337,7 +342,7 @@
                                     <action selector="pickAvatarPressed:" destination="F4v-KZ-gin" eventType="touchUpInside" id="cw3-pc-F4P"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNQ-2w-Thx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNQ-2w-Thx" customClass="RoundedButton" customModule="Dev_smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="597" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -348,6 +353,11 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createAccntPressed:" destination="F4v-KZ-gin" eventType="touchUpInside" id="Dyg-Mn-i22"/>
                                 </connections>
@@ -379,7 +389,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynu-3W-mVJ">
                                         <rect key="frame" x="0.0" y="84" width="250" height="2"/>
@@ -389,14 +399,14 @@
                                             <constraint firstAttribute="width" constant="250" id="jKb-Mu-gVP"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpe-0f-Rdu">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpe-0f-Rdu">
                                         <rect key="frame" x="0.0" y="100" width="250" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="CJA-Ga-bSE"/>
                                         </constraints>
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGR-lm-hW6">
                                         <rect key="frame" x="0.0" y="134" width="250" height="2"/>
@@ -456,7 +466,7 @@
                         <outlet property="passTxt" destination="Bpe-0f-Rdu" id="CJn-43-5mV"/>
                         <outlet property="userImg" destination="6Ti-39-yCh" id="Hd1-e3-HVl"/>
                         <outlet property="usernameTxt" destination="yHE-GZ-uZV" id="VhR-Tk-OLr"/>
-                        <segue destination="7Z6-oH-aiq" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="AGf-a2-54Q"/>
+                        <segue destination="7Z6-oH-aiq" kind="unwind" unwindAction="prepareForUnwindWithSegue:" id="JVZ-NW-Zfs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSO-jH-9Bf" userLabel="First Responder" sceneMemberID="firstResponder"/>
