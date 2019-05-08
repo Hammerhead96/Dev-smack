@@ -21,8 +21,13 @@ class ChannelVC: UIViewController {
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            let profile = ProfileVC()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+        } else {
         performSegue(withIdentifier: "toLogin", sender: nil)
-    }
+        }   }
     @objc func userDataDidChange(_ notif: Notification) {
         if AuthService.instance.isLoggedIn {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
@@ -32,7 +37,6 @@ class ChannelVC: UIViewController {
             loginBtn.setTitle("Login", for: .normal)
             userImg.image = UIImage(named: "menuProfileIcon")
             userImg.backgroundColor = UIColor.clear
-        }
-    }
+        }   }
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {}
 }
