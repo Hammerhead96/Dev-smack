@@ -308,9 +308,9 @@
                         <viewLayoutGuide key="safeArea" id="Ylq-yJ-seB"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="m3N-Ap-s62" id="agZ-23-5CJ"/>
                         <outlet property="passTxt" destination="o3e-AO-8VK" id="81P-4f-vXI"/>
                         <outlet property="spinner" destination="BfS-LK-dwY" id="Rgk-go-gfB"/>
-                        <outlet property="usernameTxt" destination="m3N-Ap-s62" id="Zhr-5t-Ose"/>
                         <segue destination="F4v-KZ-gin" kind="show" identifier="toCreateAccount" id="WXY-7x-Skq"/>
                     </connections>
                 </viewController>

@@ -53,7 +53,7 @@ class CreateAccountVC: UIViewController {
                     if success {
                         AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             if success {
-                                print("\(UserDataService.instance.name) \n\(UserDataService.instance.avatarName)")
+                                print("id = \(UserDataService.instance.id), \n\(UserDataService.instance.name) \n\(UserDataService.instance.avatarName)")
                                 self.spinner.isHidden = true
                                 self.spinner.stopAnimating()
                                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)

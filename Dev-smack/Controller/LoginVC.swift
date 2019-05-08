@@ -10,7 +10,7 @@ import UIKit
 
 class LoginVC: UIViewController {
     // Outlets
-    @IBOutlet weak var usernameTxt: UITextField!
+    @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passTxt: UITextField!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
@@ -28,7 +28,7 @@ class LoginVC: UIViewController {
     }
     func setupView() {
         spinner.isHidden = true
-        usernameTxt.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor: smackPurplePlaceHolder])
+        emailTxt.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedString.Key.foregroundColor: smackPurplePlaceHolder])
         passTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedString.Key.foregroundColor: smackPurplePlaceHolder])
         let tap = UITapGestureRecognizer(target: self, action: #selector(LoginVC.handleTap))
         view.addGestureRecognizer(tap)
@@ -39,7 +39,7 @@ class LoginVC: UIViewController {
     @IBAction func loginPressed(_ sender: Any) {
         spinner.isHidden = false
         spinner.startAnimating()
-        guard let email = usernameTxt.text , usernameTxt.text != "" else { return }
+        guard let email = emailTxt.text , emailTxt.text != "" else { return }
         guard let pass = passTxt.text , passTxt.text != "" else { return }
         AuthService.instance.loginUser(email: email, password: pass) { (success) in
             if success {
