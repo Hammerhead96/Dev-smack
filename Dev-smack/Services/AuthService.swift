@@ -119,6 +119,7 @@ class AuthService {
  self.userEmail = json["user"].stringValue
  self.authToken = json["token"].stringValue
 ******
+ see Channel and MessageService for a Swift 4 special parse
 */
 
 /*
