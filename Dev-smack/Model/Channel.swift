@@ -9,10 +9,10 @@
 import Foundation
 
 struct Channel : Decodable {
-    public private(set) var _id: String!
     public private(set) var name: String!
     public private(set) var description: String!
-    public private(set) var __v: Int?
+    public private(set) var _id: String!
+   // public private(set) var __v: Int?
 } // var here need to match source
 
 /*
