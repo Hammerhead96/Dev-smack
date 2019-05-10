@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5EEE4A92D1289E75A86FA75E /* Pods_Dev_smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B57B0F2B13448612501BCA /* Pods_Dev_smack.framework */; };
+		63140486228530A80035BAE1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63140485228530A80035BAE1 /* Message.swift */; };
 		631956AD227CFDCA00E04C9E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631956AC227CFDCA00E04C9E /* GradientView.swift */; };
 		631956B0227D20E900E04C9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631956AF227D20E900E04C9E /* Constants.swift */; };
 		6339A21B228358DF00157FF3 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339A21A228358DF00157FF3 /* MessageService.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		5EAAC2103BBC23ACF7AA2416 /* Pods-Dev-smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev-smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dev-smack/Pods-Dev-smack.release.xcconfig"; sourceTree = "<group>"; };
+		63140485228530A80035BAE1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		631956AC227CFDCA00E04C9E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		631956AF227D20E900E04C9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6339A21A228358DF00157FF3 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				6339A21C2283591900157FF3 /* Channel.swift */,
+				63140485228530A80035BAE1 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				633CFA7B227C02E00015613E /* ChannelVC.swift in Sources */,
 				635405C82280FA4F0013AC84 /* AvatarPickerVC.swift in Sources */,
 				6368D935227FF0AB00070208 /* RoundedButton.swift in Sources */,
+				63140486228530A80035BAE1 /* Message.swift in Sources */,
 				6339A21D2283591900157FF3 /* Channel.swift in Sources */,
 				6346F26F228264F5008FA020 /* CircleImage.swift in Sources */,
 				6339A21B228358DF00157FF3 /* MessageService.swift in Sources */,
