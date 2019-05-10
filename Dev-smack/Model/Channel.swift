@@ -12,11 +12,10 @@ struct Channel : Decodable {
     public private(set) var name: String!
     public private(set) var description: String!
     public private(set) var _id: String!
-   // public private(set) var __v: Int?
-} // var here need to match source
+} // var name here need to match source
 
 /*
- this is the orginal version that was never tested
+ this is the orginal version
  struct Channel {
  public private(set) var channelTitle: String!
  public private(set) var channelDescription: String!
