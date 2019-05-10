@@ -49,6 +49,7 @@ class UserDataService {
     }
     func logoutUser() {
         MessageService.instance.clearChannels()
+        MessageService.instance.clearMessages()
         id = ""
         avatarColor = ""
         avatarName = ""
