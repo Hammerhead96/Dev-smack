@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-
 class MessageService {
     static let instance = MessageService()
     var channels = [Channel]()
