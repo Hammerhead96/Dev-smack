@@ -16,22 +16,18 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var bgView: UIView!
     let data = UserDataService.instance
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
-
     @IBAction func closeModalPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
     @IBAction func logoutPressed(_ sender: Any) {
         data.logoutUser()
         NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         dismiss(animated: true, completion: nil)
     }
-    
     func setupView() {
         profileImg.image = UIImage(named: data.avatarName)
         userName.text = data.name

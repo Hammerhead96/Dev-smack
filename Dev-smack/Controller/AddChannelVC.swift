@@ -17,7 +17,6 @@ class AddChannelVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
     }
     func setupView() {
         let closeTouch = UITapGestureRecognizer(target: self, action: #selector(AddChannelVC.closeTap(_:)))
@@ -38,5 +37,4 @@ class AddChannelVC: UIViewController {
     @IBAction func closeModalPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
 }

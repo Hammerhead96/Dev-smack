@@ -16,7 +16,6 @@ class SocketService: NSObject {
     }
     let manager = SocketManager(socketURL: URL(string: BASE_URL)!)
     lazy var socket: SocketIOClient = manager.defaultSocket
- //   var socket : SocketIOClient = SocketIOClient(manager: URL(string: BASE_URL)! as! SocketManagerSpec, nsp: <#String#>)
     func establishConnection() {
         socket.connect()
     }
@@ -28,7 +27,6 @@ class SocketService: NSObject {
         completion(true)
     }
     func getChannel(completion: @escaping CompletionHandler) {
-        print("socket about to turn on")
         socket.on("channelCreated") { (dataArray, ack) in
             guard let channelName = dataArray[0] as? String else { return }
             guard let channelDesc = dataArray[1] as? String else { return }

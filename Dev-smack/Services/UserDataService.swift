@@ -48,6 +48,7 @@ class UserDataService {
         return newUIColor
     }
     func logoutUser() {
+        MessageService.instance.clearChannels()
         id = ""
         avatarColor = ""
         avatarName = ""
