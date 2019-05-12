@@ -119,6 +119,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 SocketService.instance.socket.emit("startType", UserDataService.instance.name, channelId)
             }
             isTyping = true
+            sendBtn.isHidden = false
         }
     }
     @IBAction func sendMessagePressed(_ sender: Any) {
@@ -128,6 +129,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             SocketService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId) { (success) in
                 if success {
                     self.messageTxtBox.text = ""
+                    self.sendBtn.isHidden = true
                     self.messageTxtBox.resignFirstResponder()
                     SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
                 }   }   }   }
